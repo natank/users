@@ -1,15 +1,29 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-
+import React from 'react';
 import { UserItem } from './UserItem';
+import { SearchBar } from '../../app/SearchBar';
 
-export function UsersList() {
-	const dispatch = useDispatch();
-	const users = useSelector(state => state.users);
-
+export function UsersList({
+	users,
+	currentUserId,
+	currentUserChanged,
+	filter,
+	setFilter,
+}) {
 	const content = users.map((user, index) => {
-		return <UserItem user={user} />;
+		return (
+			<UserItem
+				user={user}
+				currentUserId={currentUserId}
+				currentUserChanged={currentUserChanged}
+				key={user._id}
+			/>
+		);
 	});
 
-	return <ul className='usersList'>{content}</ul>;
+	return (
+		<div>
+			<SearchBar filter={filter} setFilter={setFilter} />
+			<ul className='usersList'>{content}</ul>
+		</div>
+	);
 }

@@ -1,0 +1,16 @@
+.app {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	margin: auto;
+	background-color: aliceblue;
+	padding: 1rem;
+}
+
+.container {
+	&--main {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		grid-gap: 1rem;
+	}
+}

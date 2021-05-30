@@ -1,8 +1,9 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
 
-export function UserItem({ user }) {
+export function UserItem({ user, currentUserId, currentUserChanged }) {
 	return (
-		<li onClick={() => user._id}>{user.first_name + '' + user.last_name}</li>
+		<li onClick={() => currentUserChanged(user._id)}>
+			{user.first_name + ' ' + user.last_name}
+		</li>
 	);
 }
