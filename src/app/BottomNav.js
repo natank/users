@@ -2,11 +2,11 @@ import React from 'react';
 
 export function BottomNav({ deleteUser, saveUser }) {
 	return (
-		<div>
+		<div className="section, bottomNav">
 			<button className='btn' onClick={deleteUser}>
 				DELETE
 			</button>
-			<button className='btn' onClick={saveUser}>
+			<button className='btn btn--save' onClick={saveUser}>
 				SAVE
 			</button>
 		</div>

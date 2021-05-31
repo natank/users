@@ -1,5 +1,5 @@
+
 import React, { useState } from 'react';
-import './styles/index.scss';
 import { TopNav } from './app/TopNav';
 import { BottomNav } from './app/BottomNav';
 import { Main } from './app/Main';
@@ -84,10 +84,8 @@ export default function App() {
 		<main className='app'>
 			<TopNav
 				currentUserChanged={currentUserChanged}
-				className='section topNav'
 			/>
 			<Main
-				className='section topNav'
 				users={users.filter(filterUser)}
 				fullName={fullName}
 				setFullName={setFullName}
@@ -101,7 +99,6 @@ export default function App() {
 			<BottomNav
 				deleteUser={deleteUser}
 				saveUser={saveUser}
-				className='section bottomNav'
 			/>
 		</main>
 	);

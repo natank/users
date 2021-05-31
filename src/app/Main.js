@@ -13,7 +13,7 @@ export function Main({
 	setFilter,
 }) {
 	return (
-		<main className='container container--main'>
+		<main className='section section--main'>
 			<UsersList
 				users={users}
 				currentUserId={currentUserId}

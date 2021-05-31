@@ -21,9 +21,9 @@ export function UsersList({
 	});
 
 	return (
-		<div>
+		<aside className= "content aside">
 			<SearchBar filter={filter} setFilter={setFilter} />
-			<ul className='usersList'>{content}</ul>
-		</div>
+			<ul className='aside__list'>{content}</ul>
+		</aside>
 	);
 }

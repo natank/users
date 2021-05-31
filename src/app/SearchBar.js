@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
+import { FaSearch } from 'react-icons/fa'
 
 export function SearchBar({ filter, setFilter }) {
 	const [term, setTerm] = useState(filter);
+
 	return (
-		<div>
+		<div className='search'>
 			<input
-				value={term}
+				value={filter}
 				placeholder='type something...'
-				onChange={e => setTerm(e.target.value)}
+				onChange={e => setFilter(e.target.value)}
 			/>
-			<button onClick={() => setFilter(term)}>Filter</button>
+			<button onClick={() => setFilter('')}><FaSearch/></button>
 		</div>
 	);
 }
